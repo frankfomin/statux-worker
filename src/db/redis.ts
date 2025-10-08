@@ -1,5 +1,6 @@
+import env from "@/env";
 import Redis from "ioredis"
 
-export const redis = new Redis("rediss://default:ASg9AAIncDJjYzhkZDVhMWFhMjA0ZTA3YTA1Mjg0NjM5OTcyNTcwM3AyMTAzMDE@special-labrador-10301.upstash.io:6379", {
+export const redis = new Redis(env.REDIS_URL, {
     maxRetriesPerRequest: null
 });
