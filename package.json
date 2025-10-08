@@ -4,9 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "tsc && tsc-alias",
-    "start:schedulers": "node dist/schedulers.js",
-    "start:workers": "node dist/workers.js"
+    "build": "tsc && tsc-alias"
   },
   "keywords": [],
   "author": "",
