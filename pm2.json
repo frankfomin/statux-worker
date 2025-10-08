@@ -1,0 +1,18 @@
+{
+  "apps": [
+    {
+      "name": "worker",
+      "script": "dist/workers.js",
+      "watch": false,
+      "autorestart": true,
+      "restart_delay": 5000
+    },
+    {
+      "name": "scheduler",
+      "script": "dist/schedulers.js",
+      "watch": false,
+      "autorestart": true,
+      "restart_delay": 5000
+    }
+  ]
+}

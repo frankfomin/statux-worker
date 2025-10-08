@@ -36,6 +36,7 @@ RUN pnpm run build
 
 # Remove development dependencies
 RUN pnpm prune --prod
+RUN npm install -g pm2
 
 
 # Final stage for app image
@@ -46,4 +47,4 @@ COPY --from=build /app /app
 
 # Start the server by default, this can be overwritten at runtime
 EXPOSE 3000
-CMD [ "pnpm", "run", "start" ]
+CMD ["pm2-runtime", "pm2.json"]
