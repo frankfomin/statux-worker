@@ -15,6 +15,7 @@
     "bullmq": "^5.61.0",
     "dotenv": "^17.2.3",
     "ioredis": "^5.8.1",
+    "pm2": "^6.0.13",
     "tsc-alias": "^1.8.16"
   },
   "devDependencies": {

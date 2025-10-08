@@ -43,9 +43,6 @@ FROM base
 # Copy built application
 COPY --from=build /app /app
 
-# Install PM2 globally in the final image
-RUN npm install -g pm2
-
 # Start the server by default, this can be overwritten at runtime
 EXPOSE 3000
-CMD pm2-runtime pm2.json
+CMD ["pnpm", "exec", "pm2-runtime", "pm2.json"]
