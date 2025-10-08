@@ -36,14 +36,15 @@ RUN pnpm run build
 
 # Remove development dependencies
 RUN pnpm prune --prod
-RUN npm install -g pm2
-
 
 # Final stage for app image
 FROM base
 
 # Copy built application
 COPY --from=build /app /app
+
+# Install PM2 globally in the final image
+RUN npm install -g pm2
 
 # Start the server by default, this can be overwritten at runtime
 EXPOSE 3000
